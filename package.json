@@ -11,19 +11,30 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^3.10.0",
+    "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
-    "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^2.0.0",
     "loopback-component-explorer": "^5.0.0",
-    "loopback": "^3.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "css-loader": "^0.28.11",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
-    "nsp": "^2.1.0"
+    "file-loader": "^1.1.11",
+    "nsp": "^2.1.0",
+    "sass-loader": "^6.0.7",
+    "webpack": "^4.2.0"
   },
   "repository": {
     "type": "",
