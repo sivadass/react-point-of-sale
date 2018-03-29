@@ -1,1 +1,1 @@
-console.log("Added index file.");
+console.log("Add index file.");
