@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 
 const App = () => {
   <div className="container">
-    <h1>POINT OF SALE APP</h1>
+    <div className="col-md-12">
+      <header>
+        <a href="/">React point of Sale</a>
+      </header>
+    </div>
   </div>;
 };
 
