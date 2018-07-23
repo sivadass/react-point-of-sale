@@ -1,3 +1,5 @@
+import Footer from "./footer";
+
 class Heaader extends React.Component {
   constructor(props) {
     super(props);
@@ -9,3 +11,5 @@ class Heaader extends React.Component {
     return <header>Header</header>;
   }
 }
+
+export default Heaader;
