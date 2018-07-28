@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Header from "./header";
+import Footer from "./footer";
+import Main from "./main";
 
 const App = () => {
   <div className="container">
     <div className="col-md-12">
-      <header>
-        <a href="/">React point of Sale</a>
-      </header>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   </div>;
 };
