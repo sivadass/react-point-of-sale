@@ -5,7 +5,11 @@ class Heaader extends React.Component {
     super(props);
   }
   render() {
-    return <header>Header</header>;
+    return (
+      <header>
+        <a href="#">React POS</a>
+      </header>
+    );
   }
 }
 
