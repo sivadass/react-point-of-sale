@@ -6,7 +6,11 @@ React JS powered point of sale application for small businesses like Restaurants
 
 ## Wireframe
 
-Designs come here
+Home View
+![Home View](https://res.cloudinary.com/sivadass/image/upload/v1533580382/mockups/react-pos-home-view.jpg)
+
+Products Catalog View
+![Product Cataog View](https://res.cloudinary.com/sivadass/image/upload/v1533580382/mockups/react-pos-products-catalog.jpg)
 
 :dart: [Features to be build](https://github.com/sivadass/react-point-of-sale/projects/1)
 
