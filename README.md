@@ -22,4 +22,6 @@ Products Catalog View
 
 ```
 npm install
+
+npm start
 ```

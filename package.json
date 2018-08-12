@@ -1,8 +1,8 @@
 {
   "name": "react-point-of-sale",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "React JS powered point of sale application for small businesses like Restaurants, Bakeries, Grocery Shops or Fashion Stores",
-  "main": "postcss.config.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/sivadass/react-point-of-sale.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sivadass/react-point-of-sale/issues"
   },
