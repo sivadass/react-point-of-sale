@@ -4,7 +4,7 @@ import "styles/app.scss";
 const App = () => {
   return (
     <div>
-      <h1>APP Started~~</h1>
+      <h1>APP Start</h1>
     </div>
   );
 };
