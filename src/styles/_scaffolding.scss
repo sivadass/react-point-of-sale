@@ -6,21 +6,35 @@
   display: flex;
   .app-sidebar{
     flex-basis: 240px;
+    flex-shrink: 0;
     padding: 16px;
     height: calc(100vh - 58px);
-    background: #eee;
-    position: relative;
-    .footer{
-      position: absolute;
-      bottom: 16px;
-      font-size: 13px;
-      line-height: 13px;
-      color: #999;
-    }
   }
   .app-wrapper{
     flex-grow: 1;
     padding: 16px;
+  }
+}
+
+.app-sidebar{
+  background: #eee;
+  position: relative;
+  ul{
+    li{
+      a{
+        color: #4099ff;
+        &.active{
+          color: #999;
+        }
+      }
+    }
+  }
+  .footer{
+    position: absolute;
+    bottom: 16px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #999;
   }
 }
 

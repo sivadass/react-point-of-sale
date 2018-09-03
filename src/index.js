@@ -41,7 +41,7 @@ const App = props => {
             <Sidebar />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/products" component={Products} />
+              <Route exact path="/products" component={Products} />
             </Switch>
           </div>
         </div>

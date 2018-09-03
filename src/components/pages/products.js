@@ -39,9 +39,9 @@ class Products extends React.Component {
     let renderProducts = products.map( (item) => {
       return(
         <div className="product-item" key={item.id}>
-        <p>{item.name}</p>
-        <h3>${item.price}</h3>
-        {item.images.length > 0 && <img src={item.images[0].src} />}
+          {item.images.length > 0 && <img src={item.images[0].src} />}
+          <p>{item.name}</p>
+          <h3>${item.price}</h3>
         </div>
       )
     })

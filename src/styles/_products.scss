@@ -3,11 +3,16 @@
   justify-content: space-between;
   flex-wrap: wrap;
   .product-item{
-    border: 1px solid #ccc;
+    border: 1px solid rgba(204, 204, 204, 0.5);
     margin-bottom: 16px;
-    flex-basis: calc(33% - 8px);
+    padding: 8px;
+    border-radius: 4px;
+    flex-basis: calc(33% - 16px);
     @media(min-width: 1200px){
-      flex-basis: calc(20% - 8px);
+      flex-basis: calc(20% - 16px);
+    }
+    @media(min-width: 1400px){
+      flex-basis: calc(16.6666% - 16px);
     }
     img{
       width: 100%;
