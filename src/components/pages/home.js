@@ -1,10 +1,9 @@
 import React from "react";
-import "../styles/index.scss"
 
-const App = () => {
+const Home = () => {
   return (
     <div className="app-wrapper">
-      <header className="container fluid">REACT POS</header>
+      <header className="container fluid">Home</header>
       <article className="container">
         Welcome to React POS
       </article>
@@ -12,4 +11,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

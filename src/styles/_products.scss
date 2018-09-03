@@ -1,0 +1,16 @@
+.products-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .product-item{
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    flex-basis: calc(33% - 8px);
+    @media(min-width: 1200px){
+      flex-basis: calc(20% - 8px);
+    }
+    img{
+      width: 100%;
+    }
+  }
+}

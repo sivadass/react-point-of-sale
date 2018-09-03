@@ -5,3 +5,15 @@ body {
   line-height: 24px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

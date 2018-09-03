@@ -1,5 +1,27 @@
 .app-wrapper{
-  min-height: 100vh;
+  //min-height: 100vh;
+}
+
+.app-container{
+  display: flex;
+  .app-sidebar{
+    flex-basis: 240px;
+    padding: 16px;
+    height: calc(100vh - 58px);
+    background: #eee;
+    position: relative;
+    .footer{
+      position: absolute;
+      bottom: 16px;
+      font-size: 13px;
+      line-height: 13px;
+      color: #999;
+    }
+  }
+  .app-wrapper{
+    flex-grow: 1;
+    padding: 16px;
+  }
 }
 
 .container{
