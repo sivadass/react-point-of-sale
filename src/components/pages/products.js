@@ -6,7 +6,8 @@ class Products extends React.Component {
     super(props);
     this.state = {
       loading: false,
-      products: []
+      products: [],
+      pageNumber: 1
     }
   }
 
@@ -14,9 +15,17 @@ class Products extends React.Component {
     this.getProucts();
   }
 
+  nextPage = () => {
+    this.setState({
+      pageNumber: this.state.pageNumber + 1
+    }, () => {
+      this.getProucts();
+    })
+  }
+
   getProucts = () => {
     this.setState({loading: true});
-    Service.get('https://pos.sivadass.in/wp-json/wc/v2/products', (status, data) => {
+    Service.get(`https://pos.sivadass.in/wp-json/wc/v2/products?page=${this.state.pageNumber}`, (status, data) => {
       this.setState({loading: false});
       if(status === 200){
         this.setState({
@@ -47,9 +56,12 @@ class Products extends React.Component {
     })
     return (
       <div className="app-wrapper">
-      <div className="products-container">
-        {this.state.products.length > 0 && renderProducts}
-      </div>
+        <div className="products-container">
+          {this.state.products.length > 0 && renderProducts}
+        </div>
+        <div className="pagination">
+          <a href="#" onClick={this.nextPage}>More Products</a>
+        </div>
       </div>
     )
   }

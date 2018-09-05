@@ -1,14 +1,26 @@
 .app-header{
   display: flex;
   width: 100%;
-  background: #f5f5f5;
+  background: $light-bg-color;
+  border-bottom: 2px solid $border-color;
   .logo,
   .search-bar,
   .user-menu{
     padding: 16px;
   }
   .search-bar{
-    margin-left: 15%; 
+    margin-left: 15%;
+    input{
+      height: 36px;
+      background: #fff;
+      border: 1px solid $border-color;
+      padding: 0 16px;
+      border-radius: 4px;
+      &:active,
+      &:focus{
+        border-color: $primary-color;
+      }
+    }
   }
   .user-menu{
     margin-left: auto;

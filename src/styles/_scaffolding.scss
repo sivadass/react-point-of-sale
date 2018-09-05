@@ -17,14 +17,14 @@
 }
 
 .app-sidebar{
-  background: #eee;
+  background: $white;
   position: relative;
   ul{
     li{
       a{
-        color: #4099ff;
+        color: $primary-color;
         &.active{
-          color: #999;
+          color: $text-color;
         }
       }
     }

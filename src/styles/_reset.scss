@@ -4,12 +4,15 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: Arial, Helvetica, sans-serif;
+  color: $text-color;
+  background: $light-bg-color;
 }
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 ul{
@@ -20,4 +23,11 @@ ul{
 
 a{
   text-decoration: none;
+}
+
+input,
+button,
+select,
+textarea{
+  font-size: 16px;
 }
