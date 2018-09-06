@@ -61,7 +61,7 @@ class Categories extends React.Component {
           {this.state.categories.length > 0 && renderCategories}
         </div>
         <div className="pagination">
-          Showing 10 products out of {this.state.totalProducts} <a href="#" onClick={this.nextPage}>More Products</a>
+          Showing {this.state.categories.length} categories out of {this.state.totalProducts} <a href="#" onClick={this.nextPage}>More Products</a>
         </div>
       </div>
     )

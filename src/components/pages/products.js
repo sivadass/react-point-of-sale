@@ -7,7 +7,7 @@ class Products extends React.Component {
     this.state = {
       loading: false,
       products: [],
-      pageNumber: 2,
+      pageNumber: 1,
       totalPages: 0,
       totalProducts: 0
     }
@@ -65,7 +65,8 @@ class Products extends React.Component {
           {this.state.products.length > 0 && renderProducts}
         </div>
         <div className="pagination">
-          Showing 10 products out of {this.state.totalProducts} <a href="#" onClick={this.nextPage}>More Products</a>
+          Showing {this.state.products.length} products out of {this.state.totalProducts} 
+          <a href="#" onClick={this.nextPage} disabled={this.state.totalPages === this.state.pageNumber}>More Products</a>
         </div>
       </div>
     )
