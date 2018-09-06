@@ -5,8 +5,8 @@ class Service {
   constructor() {
     let service = axios.create({
       auth: {
-        username: '',
-        password: ''
+        username: 'ck_af790407570dd233dc590f649c0fdf90e2015ddd',
+        password: 'cs_12c07aefda3d60951cf929b0a9d3ea5551198eb8'
       }
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);
@@ -39,7 +39,7 @@ class Service {
   get(path, callback) {
     return this.service
       .get(path)
-      .then(response => callback(response.status, response.data));
+      .then(response => callback(response.status, response.data, response.headers));
   }
 
   patch(path, payload, callback) {
@@ -62,7 +62,7 @@ class Service {
         responseType: "json",
         data: payload
       })
-      .then(response => callback(response.status, response.data))
+      .then(response => callback(response.status, response.data, response.headers))
       .catch(error => callback(error.status, error.response.data));
   }
 }

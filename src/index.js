@@ -14,6 +14,7 @@ import Header from "./components/common/header";
 import Sidebar from "./components/common/side-bar";
 import Home from "./components/pages/home";
 import Products from "./components/pages/products";
+import Categories from './components/pages/categories';
 
 const middleware = [thunk];
 if (process.env.NODE_ENV !== "production") {
@@ -42,6 +43,7 @@ const App = props => {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/products" component={Products} />
+              <Route exact path="/categories" component={Categories} />
             </Switch>
           </div>
         </div>
