@@ -1,20 +1,20 @@
-const path = require('path');
-const merge = require('webpack-merge');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CleanWbepackPlugin = require('clean-webpack-plugin');
+const path = require("path");
+const merge = require("webpack-merge");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const CleanWbepackPlugin = require("clean-webpack-plugin");
 
-const webpackCommon = require('./webpack.common');
+const webpackCommon = require("./webpack.common");
 
-const pathsToClean = ['docs'];
+const pathsToClean = ["docs"];
 const cleanOptions = {
-  root: path.resolve(__dirname, '../')
+  root: path.resolve(__dirname, "../")
 };
 
 module.exports = merge.smart(webpackCommon, {
   output: {
     filename: "main.[chunkhash].js",
-    path: path.resolve(__dirname, '../docs')
+    path: path.resolve(__dirname, "../docs/react-point-of-sale/")
   },
   mode: "production",
   optimization: {
@@ -33,8 +33,8 @@ module.exports = merge.smart(webpackCommon, {
         default: false,
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendor_app',
-          chunks: 'all',
+          name: "vendor_app",
+          chunks: "all",
           minChunks: 2
         }
       }
