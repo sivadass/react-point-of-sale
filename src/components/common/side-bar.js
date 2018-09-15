@@ -1,10 +1,12 @@
 import React from "react";
-import {NavLink, Link} from 'react-router-dom';
+import { NavLink, Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import Footer from "./footer";
 
-const Sidebar = () => {
+const Sidebar = ({ isMenuOpen }) => {
   return (
-    <div className="app-sidebar">
+    <div className={isMenuOpen ? "app-sidebar menu-open" : "app-sidebar"}>
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>
@@ -21,4 +23,17 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+const mapStateToProps = ({ header }) => ({
+  isMenuOpen: header.isMenuOpen
+});
+
+Sidebar.propTypes = {
+  isMenuOpen: PropTypes.bool
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    null
+  )(Sidebar)
+);

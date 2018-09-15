@@ -1,20 +1,50 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { toggleMenu, toggleCart } from "../../actions/header";
 
-const Header = () => {
+const Header = ({ toggleCart, toggleMenu, isMenuOpen }) => {
   return (
     <div className="app-header">
       <div className="logo">
-        <Link to="/">React POS</Link>
+        <a
+          href="#"
+          onClick={() => {
+            toggleMenu(!isMenuOpen);
+          }}
+        >
+          React POS
+        </a>
       </div>
       <div className="search-bar">
         <input type="text" placeholder="Search for products" />
-      </div> 
+      </div>
       <div className="user-menu">
         <a href="#">John Doe</a>
-      </div>   
+      </div>
     </div>
   );
 };
 
-export default Header;
+const mapStateToProps = ({ header }) => ({
+  isMenuOpen: header.isMenuOpen
+});
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ toggleMenu, toggleMenu }, dispatch);
+}
+
+Header.propTypes = {
+  isMenuOpen: PropTypes.bool,
+  toggleMenu: PropTypes.func,
+  toggleCart: PropTypes.func
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Header)
+);

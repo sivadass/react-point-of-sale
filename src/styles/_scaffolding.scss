@@ -1,35 +1,40 @@
-.app-wrapper{
+.app-wrapper {
   //min-height: 100vh;
 }
 
-.app-container{
+.app-container {
   display: flex;
-  .app-sidebar{
-    flex-basis: 240px;
-    flex-shrink: 0;
-    padding: 16px;
+  .app-sidebar {
     height: calc(100vh - 58px);
+    width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    &.menu-open {
+      flex-basis: 240px;
+      flex-shrink: 0;
+      padding: 16px;
+    }
   }
-  .app-wrapper{
+  .app-wrapper {
     flex-grow: 1;
     padding: 16px;
   }
 }
 
-.app-sidebar{
+.app-sidebar {
   background: $white;
   position: relative;
-  ul{
-    li{
-      a{
+  ul {
+    li {
+      a {
         color: $primary-color;
-        &.active{
+        &.active {
           color: $text-color;
         }
       }
     }
   }
-  .footer{
+  .footer {
     position: absolute;
     bottom: 16px;
     font-size: 13px;
@@ -38,10 +43,10 @@
   }
 }
 
-.container{
+.container {
   max-width: 1200px;
   margin: 0 auto;
-  &.fluid{
+  &.fluid {
     max-width: 100%;
   }
 }
