@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
-import "./styles/index.scss"
+import "./styles/index.scss";
 
 import reducer from "./reducers";
 import { loadState, saveState } from "./utils/local-storage";
@@ -13,8 +13,8 @@ import { loadState, saveState } from "./utils/local-storage";
 import Header from "./components/common/header";
 import Sidebar from "./components/common/side-bar";
 import Home from "./components/pages/home";
-import Products from "./components/pages/products";
-import Categories from './components/pages/categories';
+import Categories from "./components/pages/categories";
+import ProductsList from "./components/pages/products/products-list";
 
 const middleware = [thunk];
 if (process.env.NODE_ENV !== "production") {
@@ -33,7 +33,7 @@ store.subscribe(() => {
 });
 
 const App = props => {
-  return(
+  return (
     <Provider store={store}>
       <Router>
         <div className="app">
@@ -42,14 +42,15 @@ const App = props => {
             <Sidebar />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/products" component={Products} />
+              <Route exact path="/products" component={ProductsList} />
+              <Route exact path="/products/:id/edit" component={EditProduct} />
               <Route exact path="/categories" component={Categories} />
             </Switch>
           </div>
         </div>
       </Router>
     </Provider>
-  )
-}
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById("root"));
