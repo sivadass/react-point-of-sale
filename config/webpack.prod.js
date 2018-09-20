@@ -8,13 +8,13 @@ const webpackCommon = require('./webpack.common');
 
 const pathsToClean = ['docs'];
 const cleanOptions = {
-  root: path.resolve(__dirname, '../')
+  root: path.resolve(__dirname, '../home/')
 };
 
 module.exports = merge.smart(webpackCommon, {
   output: {
     filename: "main.[chunkhash].js",
-    path: path.resolve(__dirname, '../docs/react-point-of-sale/')
+    path: path.resolve(__dirname, '../docs/')
   },
   mode: "production",
   optimization: {
