@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { toggleMenu, toggleCart } from "../../actions/header";
 
-const Header = ({ toggleCart, toggleMenu, isMenuOpen }) => {
+const Header = ({ toggleCart, toggleMenu, isMenuOpen, isOnline }) => {
   return (
     <div className="app-header">
       <div className="logo">
@@ -24,12 +24,14 @@ const Header = ({ toggleCart, toggleMenu, isMenuOpen }) => {
       <div className="user-menu">
         <a href="#">John Doe</a>
       </div>
+      {!isOnline && <div className="network-status">Please check your internet connection!</div>}
     </div>
   );
 };
 
-const mapStateToProps = ({ header }) => ({
-  isMenuOpen: header.isMenuOpen
+const mapStateToProps = ({ header, appStatus }) => ({
+  isMenuOpen: header.isMenuOpen,
+  isOnline: appStatus.isOnline
 });
 
 function mapDispatchToProps(dispatch) {

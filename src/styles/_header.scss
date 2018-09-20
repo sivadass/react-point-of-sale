@@ -26,3 +26,16 @@
     margin-left: auto;
   }
 }
+
+.network-status{
+  display: block;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  max-width: 240px;
+  background: #f9f1d8;
+  border-radius: 4px;
+  left: calc(50% - 120px);
+  top: 16px;
+  padding: 8px 16px;
+}
