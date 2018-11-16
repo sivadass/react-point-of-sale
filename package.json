@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
-    "build": "NODE_ENV=production webpack --config=config/webpack.prod.js"
+    "build": "NODE_ENV=production webpack --config=config/webpack.prod.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -55,5 +57,11 @@
   "browserslist": [
     "> 1%",
     "IE 10"
-  ]
+  ],
+  "devDependencies": {
+    "@storybook/react": "^4.0.7",
+    "@storybook/addon-actions": "^4.0.7",
+    "@storybook/addon-links": "^4.0.7",
+    "@storybook/addons": "^4.0.7"
+  }
 }
